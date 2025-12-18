@@ -1,0 +1,31 @@
+MANUAL DEPLOYMENT STEPS FOR MONSTERASP.NET
+
+1. LOGIN TO CONTROL PANEL:
+   - Go to: https://admin.monsterasp.net
+   - Email: prathameshjamdade017@gmail.com
+   - Password: 8a+Q%6Gy7s#M
+   - Use activation code: 297314 if needed
+
+2. YOUR WEBSITE DETAILS:
+   - Website: cartcheckoutapi.runasp.net
+   - Database: Already configured in appsettings.json
+
+3. UPLOAD YOUR PROJECT:
+   - In control panel, find "File Manager" or "Website Files"
+   - Upload your ENTIRE project folder to the website root
+   - Make sure appsettings.json is uploaded with your database connection
+
+4. YOUR API ENDPOINTS WILL BE:
+   - https://cartcheckoutapi.runasp.net/api/restaurants
+   - https://cartcheckoutapi.runasp.net/api/menuitems
+   - https://cartcheckoutapi.runasp.net/api/cart
+   - https://cartcheckoutapi.runasp.net/api/checkout
+   - https://cartcheckoutapi.runasp.net/api/orders
+   - https://cartcheckoutapi.runasp.net/api/addresses
+
+5. IF STILL NOT WORKING:
+   - Contact MonsterASP.NET support
+   - Ask them to enable .NET 6.0 runtime
+   - Provide your website URL: cartcheckoutapi.runasp.net
+
+Your database connection string is already configured correctly in appsettings.json.
