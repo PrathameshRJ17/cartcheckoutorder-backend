@@ -66,7 +66,6 @@ namespace FoodOrderingSystem.API.Services.Implementations
                 AddressLine = address.AddressLine,
                 City = city.CityName,
                 State = state.StateName,
-                PinCode = dto.PinCode,
                 IsDefault = address.IsDefault ?? false
             };
         }
