@@ -25,8 +25,8 @@ namespace FoodOrderingSystem.API.Services.Implementations
             {
                 AddressId = a.AddressId,
                 AddressLine = a.AddressLine,
-                City = a.City?.CityName,
-                State = a.State?.StateName,
+                City = a.City?.CityName ?? $"CityId:{a.CityId}",
+                State = a.State?.StateName ?? $"StateId:{a.StateId}",
                 IsDefault = a.IsDefault ?? false
             }).ToList();
         }
