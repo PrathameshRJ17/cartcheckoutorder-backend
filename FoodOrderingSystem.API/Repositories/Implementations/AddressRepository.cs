@@ -17,6 +17,8 @@ namespace FoodOrderingSystem.API.Repositories.Implementations
         public async Task<List<Address>> GetByUserIdAsync(int userId)
         {
             return await _context.Addresses
+                .Include(a => a.City)
+                .Include(a => a.State)
                 .Where(a => a.UserId == userId)
                 .ToListAsync();
         }
@@ -30,12 +32,18 @@ namespace FoodOrderingSystem.API.Repositories.Implementations
 
         public async Task<Address?> GetByIdAsync(int addressId)
         {
-            return await _context.Addresses.FindAsync(addressId);
+            return await _context.Addresses
+                .Include(a => a.City)
+                .Include(a => a.State)
+                .FirstOrDefaultAsync(a => a.AddressId == addressId);
         }
 
         public async Task<List<Address>> GetAllAsync()
         {
-            return await _context.Addresses.ToListAsync();
+            return await _context.Addresses
+                .Include(a => a.City)
+                .Include(a => a.State)
+                .ToListAsync();
         }
 
         public async Task SaveChangesAsync()

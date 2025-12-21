@@ -25,6 +25,8 @@ namespace FoodOrderingSystem.API.Services.Implementations
             {
                 AddressId = a.AddressId,
                 AddressLine = a.AddressLine,
+                City = a.City?.CityName,
+                State = a.State?.StateName,
                 IsDefault = a.IsDefault ?? false
             }).ToList();
         }
@@ -62,6 +64,9 @@ namespace FoodOrderingSystem.API.Services.Implementations
             {
                 AddressId = address.AddressId,
                 AddressLine = address.AddressLine,
+                City = city.CityName,
+                State = state.StateName,
+                PinCode = dto.PinCode,
                 IsDefault = address.IsDefault ?? false
             };
         }
@@ -80,6 +85,8 @@ namespace FoodOrderingSystem.API.Services.Implementations
                 AddressId = address.AddressId,
                 UserId = address.UserId,
                 AddressLine = address.AddressLine,
+                City = address.City?.CityName,
+                State = address.State?.StateName,
                 IsDefault = address.IsDefault ?? false
             };
         }
@@ -92,6 +99,8 @@ namespace FoodOrderingSystem.API.Services.Implementations
                 AddressId = a.AddressId,
                 UserId = a.UserId,
                 AddressLine = a.AddressLine,
+                City = a.City?.CityName,
+                State = a.State?.StateName,
                 IsDefault = a.IsDefault ?? false
             }).ToList();
         }
